@@ -1,22 +1,5 @@
 # -*- coding: cp1250 -*-
 
-"""
-
-* poprawić liczenie a1 i a2 przy małych kątach
-* przesuwanie wszystkich połączeń
-
-sprawdzenie przy płytkach czy pasują do innych elementów
-obszar połączenia + jego przesuwanie
-plate check jednak....
-
-pointside penetration przy 2 płytkach outside
-interlopacja między alim dla bending i bez
-
-przycisk dodaj jako nowa reguła i ew przemieszczenie się po nich
-
-dodanie min przy flat connection - rozne ro
-"""
-
 # general
 from __future__ import division
 from dnBaseLib import *
@@ -2937,8 +2920,8 @@ class PolaczenieDrewniane(dnComponent.NodeComponent):
         #pobarnie stylu z obiektu dokumentu
         # ss = doc_obj.StyleSheet
         n_sp = result_obj.getResult('shear_planes')
-        #zmienne projektowe elementów
-        rtf_report_method.insertTitle('Dane projektowe elementów')
+        #zmienne projektowe elementow
+        rtf_report_method.insertTitle('Dane projektowe elementow')
         if self.connect_with_other_element is False:
             if self.force_plate_inside:
                 oth = 'Steel plate inside the pocket carved in the element'
